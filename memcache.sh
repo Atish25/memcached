@@ -21,6 +21,6 @@ publicip=$(curl icanhazip.com)
 if [ -e '/usr/bin/nmap' ]; then
 echo -e "\e[31;43m*****CHECK MEMCACHED PORT STATUS *****\e[0m" && nmap -p 11211 $publicip
  else
-yum install nmap -y
+yum install nmap -y && echo -e "\e[31;43m*****CHECK MEMCACHED PORT STATUS *****\e[0m" && nmap -p 11211 $publicip
 exit 1
 fi
