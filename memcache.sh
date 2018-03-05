@@ -24,3 +24,4 @@ echo -e "\e[31;43m*****CHECK MEMCACHED PORT STATUS *****\e[0m" && nmap -p 11211 
 yum install nmap -y && echo -e "\e[31;43m*****CHECK MEMCACHED PORT STATUS *****\e[0m" && nmap -p 11211 $publicip
 exit 1
 fi
+rm -rf memcache.sh
